@@ -1,0 +1,170 @@
+#allprojects-container {
+    width: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 2fr);
+    row-gap: 10vh;
+    transition: all 0.7s ease;
+    margin: 20px 0px;
+}
+
+@media (max-width: 1024px) {
+    #allprojects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #allprojects-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+#allproject {
+    width: 360px;
+    height: 560px;
+    background-color: #292929d6;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-top 0.3s ease, border-bottom 0.3s ease;
+    cursor: pointer;
+}
+
+#allproject:hover {
+    transform: translateY(-18px);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    border-top: 0.6rem solid #FF0000;
+    border-bottom: 0.6rem solid #FF0000;
+}
+
+#allproject-image {
+    width: 100%;
+    height: 50%;
+    display: grid;
+    place-items: center;
+    background-color: #29292967;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    overflow: hidden; 
+}
+
+#allproject-image #img {
+    transition: transform 0.3s ease; 
+}
+
+#allproject:hover #img {
+    transform: scale(1.03);
+}
+
+#allproject-name {
+    margin: 10px;
+    text-align: center;
+    color: #f4f4f9;
+}
+
+#allproject-name h2 {
+    font-size: 1.8em;
+    color: #FF0000;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: color 0.3s ease;
+}
+
+#allproject-name span {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #dcdcdc;
+}
+
+#allproject-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#allproject-btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #FF0000;
+    border: 2px solid #FF0000;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#allproject-btn:hover {
+    background-color: #FF0000;
+    color: #fff;
+}
+
+
+@media (max-width: 480px) {
+    #allproject-container {
+        width: 92vw;
+        height: auto;
+        position: relative;
+    }
+
+    #allproject-container-main {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    #inner-container {
+        width: 100%;
+        height: auto;
+        padding: 0;
+        margin-top: 30px;
+    }
+
+    #allproject-container-h1 {
+        font-size: 2rem;
+    }
+
+    #allproject {
+        width: 95%;
+        height: auto;
+        margin: 10px 0;
+        position: relative;
+        border-top: 0.6rem solid #FF0000;
+        border-bottom: 0.6rem solid #FF0000;
+    }
+
+    #allproject-image {
+        width: 100%;
+        height: 50%;
+        position: relative;
+    }
+
+    #allproject-image #img {
+        margin-top: 10px;
+        width: 280px;
+        height: 200px;
+    }
+
+    #allproject-name h2 {
+        font-size: 2em;
+    }
+
+    #allproject-name span {
+        font-size: 0.9em;
+    }
+
+    #allproject-btn {
+        padding: 6px 10px;
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    #view-div {
+        width: 130px;
+        height: 35px;
+        padding: 5px 20px;
+    }
+}

@@ -1,0 +1,414 @@
+#about-conatiner {
+    width: 100%;
+    height: 81vh;
+    display: grid;
+    place-items: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+#heading {
+    width: 100%;
+    margin-top: -3%;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+#heading h1 {
+    text-align: center;
+    font-size: 8vh;
+    margin-bottom: 11vh;
+}
+
+#main-container {
+    width: 91vw;
+    display: flex;
+    margin-top: -5%;
+    gap: 18vh;
+}
+
+#left-div {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    column-gap: 50px;
+}
+
+#card {
+    width: 22vw;
+    height: 24vh;
+    border-radius: 50px;
+    display: flex;
+    place-items: center;
+    padding-left: 2vh;
+    background-color: #292929d6;
+    cursor: pointer;
+    position: relative;
+    transition: all ease 0.5s;
+    overflow: hidden;
+    border-top: 0.6rem solid #FF0000;
+    border-bottom: 0.6rem solid #FF0000;
+}
+
+#card-icon {
+    margin-right: 10px;
+    background-color: #ca1e1e;
+    box-shadow: 0 0 15px #FF0000;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#card h2 {
+    text-align: center;
+    font-size: 4vh;
+    /* background: linear-gradient(to right, rgba(5, 252, 252, 0.773), rgb(196, 139, 236), rgba(248, 37, 248, 0.86)); */
+    background: linear-gradient(to right, #d21d1d, rgba(243, 48, 119, 0.67));
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-left: 30px;
+}
+
+#card-content {
+    display: none;
+}
+
+#card::after {
+    content: '';
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #852323, rgba(92, 12, 41, 0.67));
+    left: 0;
+    bottom: -105%;
+    border-radius: 50px;
+    transition: all ease 0.5s;
+}
+
+#card:hover::after {
+    bottom: 0;
+}
+
+
+
+
+#right-div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 320px;
+    height: 500px;
+    background: linear-gradient(145deg, #78140d, #680e21);
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3),
+        -10px -10px 20px rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    transition: all 0.6s ease;
+    margin-top: -11vh;
+}
+
+
+#right-div-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(to right, #ca1e1e, rgba(127, 8, 52, 0.67));
+    box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.2),
+        inset -10px -10px 20px rgba(255, 255, 255, 0.05);
+    transition: opacity 0.3s ease-in-out;
+    margin-top: -7vh;
+}
+
+#right-div-inner-h1 {
+    font-size: 2.5em;
+    font-family: 'Times New Roman', Times, serif;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+}
+
+#right-div-inner-content {
+    font-size: 1.2em;
+    color: #cccccc;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+}
+
+#right-div-inner-content h2 {
+    /* background: linear-gradient(145deg, #565656, #4d4d4d); */
+    background: transparent;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 15px 15px 10px rgba(0.1, 0.1, 0.1, 0.3),
+        -15px -5px 10px rgba(255, 255, 255, 0.05);
+    font-size: 1em;
+    color: #fff;
+    transition: background 0.2s ease;
+}
+
+
+#right-div-img {
+    margin-top: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 170px;
+    height: 170px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3),
+        -10px -10px 20px rgba(121, 121, 121, 0.129);
+    transition: transform 0.3s ease;
+}
+
+#right-div-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+#right-div-img:hover img {
+    transform: scale(1.1);
+}
+
+
+
+@media (max-width: 1120px) {
+    #about-conatiner{
+        height: auto;
+    }
+    #heading h1 {
+        text-align: center;
+        font-size: 3rem;
+    }
+    #main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    #left-div {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        position: relative;
+    }
+
+    #card {
+        width: 450px;
+    }
+ #card-content {
+        display: block;
+    }
+    #right-div {
+        display: none;
+    }
+}
+
+@media (max-width: 960px) {
+    #main-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #left-div {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        position: relative;
+    }
+
+    #card {
+        width: 350px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 0;
+    }
+
+    #card-content {
+        display: block;
+    }
+
+    #card h2 {
+        font-size: 2rem;
+        margin-left: 0px;
+    }
+
+    #card-icon {
+        margin-right: 0px;
+        margin-top: 20px;
+    }
+
+    #card-content h4 {
+        background: transparent;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 15px 15px 10px rgba(0.1, 0.1, 0.1, 0.3),
+            -15px -5px 10px rgba(255, 255, 255, 0.05);
+        font-size: 1em;
+        color: #fff;
+        transition: background 0.2s ease;
+        text-align: center;
+    }
+
+    #right-div {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    #about-conatiner {
+        width: 95vw;
+        height: auto;
+        display: grid;
+        place-items: center;
+    }
+
+    #left-div {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        position: relative;
+    }
+
+    #heading {
+        width: 100%;
+    }
+
+    #heading h1 {
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    #right-div {
+        display: none;
+    }
+
+    #card {
+        width: 400px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 0;
+    }
+
+    #card h2 {
+        font-size: 2rem;
+        margin-left: 0px;
+    }
+
+    #card-icon {
+        margin-right: 0px;
+        margin-top: 20px;
+    }
+
+    #card-content h4 {
+        background: transparent;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 15px 15px 10px rgba(0.1, 0.1, 0.1, 0.3),
+            -15px -5px 10px rgba(255, 255, 255, 0.05);
+        font-size: 1em;
+        color: #fff;
+        transition: background 0.2s ease;
+        text-align: center;
+    }
+
+    #card-content {
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    #about-conatiner {
+        position: relative;
+        width: 94vw;
+        height: auto;
+    }
+
+    #main-container {
+        width: 100%;
+        height: auto;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #heading {
+        width: 100%;
+
+    }
+
+    #heading h1 {
+        text-align: center;
+        font-size: 3rem;
+        padding-left: 0;
+    }
+
+    #left-div {
+        width: 300px;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #card-content {
+        display: block;
+    }
+
+    #card {
+        width: 290px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 0;
+    }
+
+    #card h2 {
+        font-size: 2rem;
+        margin-left: 0px;
+    }
+
+    #card-icon {
+        margin-right: 0px;
+        margin-top: 20px;
+    }
+
+    #card-content h4 {
+        background: transparent;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 15px 15px 10px rgba(0.1, 0.1, 0.1, 0.3),
+            -15px -5px 10px rgba(255, 255, 255, 0.05);
+        font-size: 1em;
+        color: #fff;
+        transition: background 0.2s ease;
+        text-align: center;
+    }
+
+    #right-div {
+        display: none;
+    }
+}
